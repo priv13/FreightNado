@@ -85,6 +85,51 @@ namespace GroupReport6 {
         protected global::System.Web.UI.WebControls.TextBox txtPasswordConfirm;
         
         /// <summary>
+        /// txtFirstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFirstname;
+        
+        /// <summary>
+        /// txtLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLastname;
+        
+        /// <summary>
+        /// txtUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        
+        /// <summary>
+        /// txtPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
+        
+        /// <summary>
+        /// txtTouchPin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTouchPin;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>

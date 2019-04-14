@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -41,15 +43,40 @@ namespace GroupReport6
             {
                 lblError.Text = string.Empty;
             }
-            if (txtPassword.Text.Length < 6)
+            
+
+            string connetionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            SqlConnection cnn;
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+
+            string sql = "Select Userid from [User] where Email = @email";
+
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+
+            SqlParameter param = new SqlParameter();
+
+
+            
+            cmd = new SqlCommand(sql, cnn);
+
+            param = new SqlParameter();
+            param.ParameterName = "@email";
+            param.Value = txtEmail.Text;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            int userId = 0;
+            while (reader.Read())
             {
-                lblError.Text = "Password is incorrect(Must be 6 characters at least).";
-                return;
+                userId = Convert.ToInt16(reader["Userid"]);
+
             }
-            else
-            {
-                Response.Redirect("Profile.aspx");
-            }
+
+            cnn.Close();
+
+            Response.Redirect("http://localhost:55690/JobBoard.aspx?Userid=" + userId + "&SearchType=0");
         }
     }
 }

@@ -149,11 +149,43 @@
                         <asp:TextBox ID="txtPasswordConfirm" runat="server" TextMode="Password" placeholder="Confirm Password ..."></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
                     </td>
                     <td class="auto-style10">Email: <a href="mailto:FreightNado@shipping.net">FreightNado@shipping.net</a><br />
                         Phone: (987) 654 - 3210 <br />
                         Mail: Freight Ave, Minnesota 453</td>
+                </tr>
+                <tr>
+                    <td />
+                    <td class="auto-style21">
+                        <asp:TextBox ID="txtFirstname" runat="server"  placeholder="Firstname ..."></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:TextBox ID="txtLastname" runat="server"  placeholder="Lastname ..."></asp:TextBox>
+                        <br />
+                        <br />
+                        
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td />
+                    <td class="auto-style21">
+                        <asp:TextBox ID="txtUsername" runat="server"  placeholder="Username ..."></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:TextBox ID="txtPhoneNumber" runat="server"  placeholder="Phone Number ..."></asp:TextBox>
+                        <br />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td class="auto-style21">
+                        <asp:TextBox ID="txtTouchPin" runat="server"  placeholder="TouchPin ..."></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style12"></td>
