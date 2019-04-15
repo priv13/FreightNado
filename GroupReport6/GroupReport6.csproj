@@ -177,4 +177,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+	   <Target Name="CopyRoslynCompilerFilesToOutputDirectory" AfterTargets="CopyFilesToOutputDirectory">
+    <Copy SourceFiles="@(RoslyCompilerFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" ContinueOnError="true" SkipUnchangedFiles="true" Retries="0" />
+  </Target>
 </Project>
