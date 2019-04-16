@@ -1,0 +1,4 @@
+﻿Select Date, PaymentAmount, Weight, ContactPhoneNumber, l1.Description as 'To Location', l2.Description as 'From Location' ,u1.FirstName as 'Shipper', u2.FirstName as 'Carrier', t.Description as 'Truck Type', ss.Descripiton as 'Status' FROM Shipment inner join Location as l1 on Shipment.ToLocationid = l1.Locationid inner join Location as l2 on Shipment.FromLocationid = l2.Locationid inner join [User] as u1 on Shipment.ShipperUserid = u1.Userid inner join [User] u2 on Shipment.CarrierUserid = u2.userid inner join TruckType as t on Shipment.TruckTypeid = t.TruckTypeid inner join ShipmentStatus ss on Shipment.ShipmentStatusid = ss.ShipmentStautsid
+
+Select * FROM Shipment
+update Shipment set CarrierUserid = 1 where Shipmentid = 1
