@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JobBoard.aspx.cs" Inherits="GroupReport6.JobBoard" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoadDetails.aspx.cs" Inherits="GroupReport6.LoadDetails" %>
 
 <!DOCTYPE html>
 
@@ -9,9 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            
-            <asp:Button ID="btnAllLoads" runat="server" Text="All Loads" OnClick="btnAllLoads_Click" /><asp:Button ID="btnMyLoads" runat="server" Text="My Loads Status" OnClick="btnMyLoads_Click" /><asp:Button ID="btnMyShipments" runat="server" Text="My Shipments Status" OnClick="btnMyShipments_Click" /><br />
-            Shipment DB<asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False"  DataSourceID="SqlDataSource2" OnRowDataBound="GridView2_RowDataBound" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" SelectedIndex="1" >
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  DataSourceID="SqlDataSource1">
                 <Columns>
                     <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                     <asp:BoundField DataField="PaymentAmount" HeaderText="PaymentAmount" SortExpression="PaymentAmount" />
@@ -25,9 +23,14 @@
                     <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
                 </Columns>
             </asp:GridView>
+            <asp:Button ID="btnAcceptLoad" runat="server" OnClick="btnAcceptLoad_Click" Text="Accept Load" />
             <br />
         </div>
-        
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="Select Date, PaymentAmount, Weight, ContactPhoneNumber, l1.Description as 'To Location', l2.Description as 'From Location' ,u1.FirstName as 'Shipper', u2.FirstName as 'Carrier', t.Description as 'Truck Type', ss.Descripiton as 'Status' FROM Shipment inner join Location as l1 on Shipment.ToLocationid = l1.Locationid inner join Location as l2 on Shipment.FromLocationid = l2.Locationid inner join [User] as u1 on Shipment.ShipperUserid = u1.Userid inner join [User] u2 on Shipment.CarrierUserid = u2.userid inner join TruckType as t on Shipment.TruckTypeid = t.TruckTypeid inner join ShipmentStatus ss on Shipment.ShipmentStatusid = ss.ShipmentStautsid WHERE ([Shipmentid] = @Shipmentid)">
+            <SelectParameters>
+                <asp:QueryStringParameter DefaultValue="1" Name="Shipmentid" QueryStringField="s" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>

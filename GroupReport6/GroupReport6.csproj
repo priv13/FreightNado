@@ -75,6 +75,7 @@
     <Content Include="Images\logo_transparent.png" />
     <Content Include="Images\unlock.png" />
     <Content Include="JobBoard.aspx" />
+    <Content Include="LoadDetails.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="PasswordRecovery.aspx" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="JobBoard.aspx.designer.cs">
       <DependentUpon>JobBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadDetails.aspx.cs">
+      <DependentUpon>LoadDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadDetails.aspx.designer.cs">
+      <DependentUpon>LoadDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login.aspx.cs">
