@@ -51,8 +51,9 @@ namespace GroupReport6
             cnn = new SqlConnection(connetionString);
             cnn.Open();
 
-            string sql = "Select Userid from [User] where Email = @email";
-            //string sql = "SELECT [Email], [Password] FROM [User] WHERE ([Password],[Email] = @Password, @Email)";
+            // grabs password and email
+            string sql = "Select Userid from [User] where Email = @email AND Password = @password";
+            
 
             SqlCommand cmd = new SqlCommand(sql, cnn);
 
@@ -68,13 +69,18 @@ namespace GroupReport6
 
             cmd.Parameters.Add(param);
 
+            param = new SqlParameter();
+            param.ParameterName = "@password";
+            param.Value = txtPassword.Text;
+
+            cmd.Parameters.Add(param);
+
             SqlDataReader reader = cmd.ExecuteReader();
             int userId = 0;
 
             if (reader == null || !reader.HasRows)
             {
-                lblError.Text = "Email not registered";
-                //lbl = "";
+                lblError.Text = "Email or password not correct, please try again";
             }
             if (reader.HasRows)
             {
@@ -86,7 +92,7 @@ namespace GroupReport6
                 }
 
                 cnn.Close();
-
+                // if email && password exist, redirected here
                 Response.Redirect("http://localhost:55690/JobBoard.aspx?Userid=" + userId + "&SearchType=0");
             }
         }
