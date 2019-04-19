@@ -50,9 +50,11 @@ namespace GroupReport6
             }
 
             //matching passwords
-            if(!txtPassword.Text.Equals(txtPasswordConfirm.Text))
+            if(txtPassword.Text != txtPasswordConfirm.Text)
             {
                 lblInfo.Text = "** Confirmed password does not match original, please check spelling.";
+                //return added for if passwords don't match
+                return; 
             } else
             {
                 lblInfo.Text = string.Empty;
