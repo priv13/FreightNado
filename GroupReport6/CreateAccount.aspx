@@ -15,12 +15,12 @@
         }
         .auto-style3 {
             width: 405px;
-            background-color: #99CCFF;
+            background-color: #33CCFF;
         }
         .auto-style5 {
             width: 405px;
             height: 91px;
-            background-color: #99CCFF;
+            background-color: #33CCFF;
         }
         .auto-style7 {
             height: 91px;
@@ -29,7 +29,7 @@
         .auto-style8 {
             width: 405px;
             height: 95px;
-            background-color: #99CCFF;
+            background-color: #33CCFF;
         }
         .auto-style10 {
             height: 95px;
@@ -45,7 +45,7 @@
         .auto-style12 {
             width: 405px;
             height: 130px;
-            background-color: #99CCFF;
+            background-color: #33CCFF;
         }
         .auto-style13 {
             width: 496px;
@@ -71,7 +71,7 @@
         .auto-style17 {
             width: 405px;
             height: 30px;
-            background-color: #333333;
+            background-color: #33CCFF;
             text-align: left;
         }
                 
@@ -94,7 +94,38 @@
         .auto-style24 {
             color: #FF0000;
         }
-        .auto-style25 {
+        .auto-style26 {
+            background-color: #33CCFF;
+        }
+        .auto-style27 {
+            color: #0066FF;
+        }
+        #txtEmail:focus {
+            background-color: yellow;
+        }
+        #txtPassword:focus {
+            background-color: yellow;
+        }
+        #txtPasswordConfirm:focus {
+            background-color: yellow;
+        }
+        #txtFirstname:focus {
+            background-color: yellow;
+        }
+        #txtLastname:focus {
+            background-color: yellow;
+        }
+        #txtPhoneNumber:focus {
+            background-color: yellow;
+        }
+        #txtTouchPin:focus {
+            background-color: yellow;
+        }
+        #txtUsername:focus {
+            background-color: yellow;
+        }
+        
+        .auto-style28 {
             color: #000000;
         }
         
@@ -124,8 +155,8 @@
                             <span class="--mb--rich-text" data-boldtype="0" style="font-family:SFUIText; font-weight:400; font-size:14px; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">At FreightNado, we strive to give the best in both worlds to couriers and shippers around the world. We believe that the two should have a good connection, and get to choose who they want to work with.</span></p>
                     </td>
                     <td class="auto-style21">
-                        <asp:Label ID="lblWelcome" runat="server" Text="Welcome to FreightNado, please fill out the details below to join." CssClass="auto-style25" ForeColor="Black"></asp:Label>
-                        <br />
+                        <asp:Label ID="lblWelcome" runat="server" Text="Welcome to FreightNado, please fill out the details below to join." CssClass="auto-style28" ForeColor="Black"></asp:Label>
+                        <br class="auto-style28" />
                         <br />
                         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email ..."></asp:TextBox>
                     </td>
@@ -155,7 +186,7 @@
                         Mail: Freight Ave, Minnesota 453</td>
                 </tr>
                 <tr>
-                    <td />
+                    <td class="auto-style26" />
                     <td class="auto-style21">
                         <asp:TextBox ID="txtFirstname" runat="server"  placeholder="Firstname ..."></asp:TextBox>
                         <br />
@@ -168,7 +199,7 @@
                     
                 </tr>
                 <tr>
-                    <td />
+                    <td class="auto-style26" />
                     <td class="auto-style21">
                         <asp:TextBox ID="txtUsername" runat="server"  placeholder="Username ..."></asp:TextBox>
                         <br />
@@ -179,7 +210,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td />
+                    <td class="auto-style26" />
                     <td class="auto-style21">
                         <asp:TextBox ID="txtTouchPin" runat="server"  placeholder="TouchPin ..."></asp:TextBox>
                         <br />
@@ -190,9 +221,9 @@
                 <tr>
                     <td class="auto-style12"></td>
                     <td class="auto-style13">
-                        <br />
-                        <br />
-                        Already a member? Click <a href="Login.aspx">HERE!</a>
+                        <br class="auto-style28" />
+                        <br class="auto-style28" />
+                        <span class="auto-style28">Already a member? Click</span><span class="auto-style27"> </span><a href="Login.aspx"><span class="auto-style27">HERE!</span></a>
                     </td>
                     <td class="auto-style14"></td>
                 </tr>
