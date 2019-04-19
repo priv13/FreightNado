@@ -52,7 +52,7 @@ namespace GroupReport6
                 SqlConnection cn = new SqlConnection(strConnection);
                 cn.Open();
 
-                string qry1 = "SELECT * FROM [User] WHERE email=@email AND password=@password";
+                string qry1 = "SELECT * FROM [User] WHERE email=@email";
 
                 SqlCommand cmd = new SqlCommand(qry1, cn);
                 cmd.Parameters.AddWithValue("@email", email);
