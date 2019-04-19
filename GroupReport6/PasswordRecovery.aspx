@@ -91,6 +91,12 @@
         a:hover {
             background-color: yellow;
         }
+        #txtEmail:focus {
+            background-color: yellow;
+        }
+        #txtPin:focus {
+            background-color: yellow;
+        }
     </style>
 </head>
 <body style="height: 680px; margin-top: 0px;">
