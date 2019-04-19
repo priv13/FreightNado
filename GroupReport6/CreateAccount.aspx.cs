@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+// changed UserId identification specifcation to true, was not accepting null values before. 
 namespace GroupReport6
 {
     public partial class CreateAccount : System.Web.UI.Page
@@ -68,7 +68,7 @@ namespace GroupReport6
             {
                 lblInfo.Text = string.Empty;
             }
-            // add the user to the databse
+            // add the user to the databse 
             string connetionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection cnn;
             cnn = new SqlConnection(connetionString);
