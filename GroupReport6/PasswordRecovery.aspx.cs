@@ -32,6 +32,7 @@ namespace GroupReport6
         {
 
             string email = txtEmail.Text;
+            string pin = txtPin.Text;
             //validate email
             if (txtEmail.Text == string.Empty)
             {
@@ -52,37 +53,54 @@ namespace GroupReport6
                 SqlConnection cn = new SqlConnection(strConnection);
                 cn.Open();
 
-                string qry1 = "SELECT * FROM [User] WHERE email=@email";
+                string qry1 = "SELECT * FROM [User] WHERE email=@email AND TouchPin=@touchpin";
 
                 SqlCommand cmd = new SqlCommand(qry1, cn);
-                cmd.Parameters.AddWithValue("@email", email);
+                SqlParameter param = new SqlParameter();
+
+                cmd = new SqlCommand(qry1, cn);
+
+                param = new SqlParameter();
+                param.ParameterName = "@email";
+                param.Value = txtEmail.Text;
+
+                cmd.Parameters.Add(param);
+
+                param = new SqlParameter();
+                param.ParameterName = "@touchpin";
+                param.Value = txtPin.Text;
+
+                cmd.Parameters.Add(param);
+                //cmd.Parameters.AddWithValue("@email", email);
+                
+                //cmd.Parameters.AddWithValue("@touchpin", pin);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
 
                 if(rdr == null || !rdr.HasRows)
                 {
-                    lblError.Text = "Email not registered";
+                    lblError.Text = "Email not registered or pin incorrect";
                     lblInfo.Text = "";
                 }
-                if (rdr.HasRows)
-                {
-                    //when in read mode ask for data
-                    while (rdr.Read())
+                    if (rdr.HasRows)
                     {
-                        email = rdr["email"].ToString();
-                        if (txtEmail.Text == email)
+                        //when in read mode ask for data
+                        while (rdr.Read())
                         {
-                            //display password if email is in database
-                            lblError.Text = "";
-                            lblInfo.Text = "Email found, please check above for your password";
-                        }
-                        
+                            email = rdr["email"].ToString();
+                            if (txtEmail.Text == email)
+                            {
+                                //display password if email is in database
+                                lblError.Text = "";
+                                lblInfo.Text = "Email found, please check above for your password";
+                            }
+
                         }
                     }
 
-                }
-
             }
+
         }
     }
+}
 

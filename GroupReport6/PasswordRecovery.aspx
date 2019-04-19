@@ -88,6 +88,9 @@
         .auto-style20 {
             text-decoration: underline;
         }
+        a:hover {
+            background-color: yellow;
+        }
     </style>
 </head>
 <body style="height: 680px; margin-top: 0px;">
@@ -105,9 +108,10 @@
             </tr>
             <tr>
                 <td class="auto-style9">
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Email], [Password] FROM [User] WHERE ([Email] = @Email)">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Email], [Password] FROM [User] WHERE (([Email] = @Email) AND ([TouchPin] = @TouchPin))">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="txtEmail" Name="Email" PropertyName="Text" Type="String" />
+                            <asp:ControlParameter ControlID="txtPin" Name="TouchPin" PropertyName="Text" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="auto-style20">
@@ -125,9 +129,11 @@
             <tr>
                 <td class="auto-style14"></td>
                 <td class="auto-style15"><span class="auto-style20">Forgout your password?</span><br class="auto-style20" />
-                    <span class="auto-style20">Please enter you email and hit submit.</span><br class="auto-style20" />
+                    <span class="auto-style20">Please enter you email and pin.</span><br class="auto-style20" />
                     <br class="auto-style20" />
-                    <asp:TextBox ID="txtEmail" runat="server" OnTextChanged="TextBox1_TextChanged" TextMode="Email" CssClass="auto-style20"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" OnTextChanged="TextBox1_TextChanged" TextMode="Email" CssClass="auto-style20" placeholder="Email ..."></asp:TextBox>
+                    <br />
+                    <asp:TextBox ID="txtPin" runat="server" placeholder="Pin ..."></asp:TextBox>
                     <br class="auto-style20" />
                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" CssClass="auto-style20" />
                     <br class="auto-style20" />

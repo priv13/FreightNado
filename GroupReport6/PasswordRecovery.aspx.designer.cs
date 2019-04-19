@@ -67,6 +67,15 @@ namespace GroupReport6 {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
+        /// txtPin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPin;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>
