@@ -129,6 +129,10 @@
             color: #000000;
         }
         
+        .auto-style29 {
+            color: #FF3300;
+        }
+        
     </style>
 </head>
 <body>
@@ -221,7 +225,7 @@
                 <tr>
                     <td class="auto-style12"></td>
                     <td class="auto-style13">
-                        <br class="auto-style28" />
+                        <span class="auto-style29">**Note: pin may be used to reset password</span><br class="auto-style28" />
                         <br class="auto-style28" />
                         <span class="auto-style28">Already a member? Click</span><span class="auto-style27"> </span><a href="Login.aspx"><span class="auto-style27">HERE!</span></a>
                     </td>
