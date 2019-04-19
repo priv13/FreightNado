@@ -40,7 +40,7 @@
         body {
             background-color: white;
             text-align: center;
-            cellspacing = 0;
+            cellspacing: = 0;
         }
         .auto-style12 {
             width: 405px;
@@ -192,7 +192,7 @@
                     <td class="auto-style13">
                         <br />
                         <br />
-                        Already a member? Click<a href="Login.aspx">HERE!</a>
+                        Already a member? Click <a href="Login.aspx">HERE!</a>
                     </td>
                     <td class="auto-style14"></td>
                 </tr>
