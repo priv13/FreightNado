@@ -100,5 +100,10 @@ namespace GroupReport6
                   ClientScript.GetPostBackClientHyperlink(this.GridView2, "Select$" + e.Row.RowIndex + 1);
             }
         }
+
+        protected void btnSignout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Signout.aspx");
+        }
     }
 }
