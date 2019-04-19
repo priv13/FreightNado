@@ -76,7 +76,7 @@ namespace GroupReport6
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             
-            string sql = "insert into [User] (Email, Password,Firstname,Lastname, Username, Rating, TouchPin) values (@email,@password,@firstname,@lastname,@username,@rating,@touchpin)";
+            string sql = "insert into [User] (Email, Password,Firstname,Lastname, Username, PhoneNumber, Rating, TouchPin) values (@email,@password,@firstname,@lastname,@username,@phonenumber,@rating,@touchpin)";
             SqlCommand cmd = new SqlCommand(sql, cnn);
 
             SqlParameter param = new SqlParameter();
@@ -87,7 +87,7 @@ namespace GroupReport6
 
             param = new SqlParameter();
             param.ParameterName = "@password";
-            param.Value = txtEmail.Text;
+            param.Value = txtPassword.Text;
 
             cmd.Parameters.Add(param);
 
@@ -118,6 +118,12 @@ namespace GroupReport6
             param = new SqlParameter();
             param.ParameterName = "@touchpin";
             param.Value = txtTouchPin.Text;
+
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter();
+            param.ParameterName = "@phonenumber";
+            param.Value = txtPhoneNumber.Text;
 
             cmd.Parameters.Add(param);
 
