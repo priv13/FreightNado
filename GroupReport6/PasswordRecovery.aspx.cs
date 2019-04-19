@@ -62,6 +62,7 @@ namespace GroupReport6
                 if(rdr == null || !rdr.HasRows)
                 {
                     lblError.Text = "Email not registered";
+                    lblInfo.Text = "";
                 }
                 if (rdr.HasRows)
                 {

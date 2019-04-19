@@ -22,15 +22,23 @@
             background-color: #333333;
             text-align: center;
         }
-        
-
         .auto-style4 {
             color: #FFFFFF;
-        }
-        
-
+        }     
         .auto-style5 {
-            width: 437px;
+            width: 547px;
+        }
+        #txtEmail:focus {
+            background-color: yellow;
+        }
+        #txtPassword:focus {
+            background-color: yellow;
+        }
+        a:hover {
+            background-color: yellow;
+        }
+        #btnLogin:hover {
+            background-color: green;
         }
         
 

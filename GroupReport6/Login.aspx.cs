@@ -24,7 +24,7 @@ namespace GroupReport6
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             // email validation
-            if(txtEmail.Text == string.Empty)
+            if (txtEmail.Text == string.Empty)
             {
                 lblError.Text = "** Please enter a email";
                 return;
@@ -35,15 +35,16 @@ namespace GroupReport6
             }
 
             //password validation
-            if(txtPassword.Text == string.Empty)
+            if (txtPassword.Text == string.Empty)
             {
                 lblError.Text = "** Please enter a password";
                 return;
-            } else
+            }
+            else
             {
                 lblError.Text = string.Empty;
             }
-            
+
 
             string connetionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection cnn;
@@ -51,13 +52,14 @@ namespace GroupReport6
             cnn.Open();
 
             string sql = "Select Userid from [User] where Email = @email";
+            //string sql = "SELECT [Email], [Password] FROM [User] WHERE ([Password],[Email] = @Password, @Email)";
 
             SqlCommand cmd = new SqlCommand(sql, cnn);
 
             SqlParameter param = new SqlParameter();
 
 
-            
+
             cmd = new SqlCommand(sql, cnn);
 
             param = new SqlParameter();
@@ -68,15 +70,25 @@ namespace GroupReport6
 
             SqlDataReader reader = cmd.ExecuteReader();
             int userId = 0;
-            while (reader.Read())
+
+            if (reader == null || !reader.HasRows)
             {
-                userId = Convert.ToInt16(reader["Userid"]);
-
+                lblError.Text = "Email not registered";
+                //lbl = "";
             }
+            if (reader.HasRows)
+            {
 
-            cnn.Close();
+                while (reader.Read())
+                {
+                    userId = Convert.ToInt16(reader["Userid"]);
 
-            Response.Redirect("http://localhost:55690/JobBoard.aspx?Userid=" + userId + "&SearchType=0");
+                }
+
+                cnn.Close();
+
+                Response.Redirect("http://localhost:55690/JobBoard.aspx?Userid=" + userId + "&SearchType=0");
+            }
         }
     }
 }
