@@ -14,12 +14,12 @@
             height: 592px;
         }
         .auto-style3 {
-            width: 405px;
+            width: 542px;
             background-color: #33CCFF;
-            font-size: x-large;
+            font-size: large;
         }
         .auto-style5 {
-            width: 405px;
+            width: 542px;
             height: 91px;
             background-color: #33CCFF;
         }
@@ -28,7 +28,7 @@
             background-color: #FFFFCC;
         }
         .auto-style8 {
-            width: 405px;
+            width: 542px;
             height: 95px;
             background-color: #33CCFF;
         }
@@ -41,10 +41,12 @@
         body {
             background-color: white;
             text-align: center;
-            cellspacing: = 0;
+        }
+        table {
+            border-collapse: collapse;
         }
         .auto-style12 {
-            width: 405px;
+            width: 542px;
             height: 130px;
             background-color: #33CCFF;
         }
@@ -70,7 +72,7 @@
             border: 4px solid #FFFFFF;
         }
         .auto-style17 {
-            width: 405px;
+            width: 542px;
             height: 30px;
             background-color: #33CCFF;
             text-align: left;
@@ -93,6 +95,7 @@
         }
         .auto-style26 {
             background-color: #33CCFF;
+            width: 542px;
         }
         .auto-style27 {
             color: #0066FF;
@@ -137,12 +140,16 @@
             background-color: #FFFFFF;
         }
         
+        .auto-style32 {
+            font-size: medium;
+        }
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
-            <table class="auto-style2" cellspacing="0">
+            <table class="auto-style2">
                 <tr>
                     <td class="auto-style17">
                         <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/Images/logo_transparent.png" />
@@ -160,7 +167,7 @@
                 <tr>
                     <td class="auto-style5">
                         <p style="line-height:0; margin-bottom:5px;">
-                            <span class="auto-style30" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">At FreightNado, we strive to give the best in both worlds to couriers and shippers around the world. We believe that the two should have a good connection, and get to choose who they want to work with.</span></p>
+                            <span class="auto-style30" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">A</span><span class="auto-style32" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">t FreightNado, we strive to give the best in both worlds to couriers and shippers around the world. We believe that the two should have a good connection, and get to choose who they want to work with.</span></p>
                     </td>
                     <td class="auto-style31">
                         <asp:Label ID="lblWelcome" runat="server" Text="Welcome to FreightNado, please fill out the details below to join." CssClass="auto-style28" ForeColor="Black"></asp:Label>
@@ -179,7 +186,7 @@
                         <p style="line-height:0; margin-bottom:5px;">
                             &nbsp;</p>
                         <p style="line-height:0; margin-bottom:5px;">
-                            <span class="auto-style30" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">That is why we created this app, we are giving the ability for shippers and couriers to connect with one another and rate eachother off of our 5 star system.</span></p>
+                            <span class="auto-style32" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">That is why we created this app, we are giving the ability for shippers and couriers to connect with one another and rate eachother off of our 5 star system.</span></p>
                         <p style="line-height:0; margin-bottom:5px;">
                             &nbsp;</p>
                         <p style="line-height:0; margin-bottom:5px;">
@@ -199,7 +206,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style26" />
-                            <span class="auto-style30" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">If you would like to know anything more about us please don&#39;t hesitate to contact either through mail, email, or by phone.</span><td class="auto-style31">
+                            <span class="auto-style32" data-boldtype="0" style="font-family:SFUIText; font-weight:400; color:rgb(16, 16, 16); font-style:normal; letter-spacing:0px; line-height:17px; text-decoration:none;">If you would like to know anything more about us please don&#39;t hesitate to contact either through mail, email, or by phone.</span><td class="auto-style31">
                         <asp:TextBox ID="txtFirstname" runat="server"  placeholder="Firstname ..."></asp:TextBox>
                         <br />
                         <br />

@@ -97,13 +97,16 @@
         #txtPin:focus {
             background-color: yellow;
         }
+        table {
+            border-collapse: collapse;
+        }
     </style>
 </head>
 <body style="height: 680px; margin-top: 0px;">
     <form id="form1" runat="server">
         <div>
         </div>
-        <table class="auto-style1" cellspacing="0">
+        <table class="auto-style1">
             <tr>
                 <td class="auto-style17">
                     <asp:Image ID="imgLogo" runat="server" Height="70px" ImageUrl="~/Images/logo_transparent.png" Width="73px" />
