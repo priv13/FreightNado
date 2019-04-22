@@ -16,6 +16,10 @@
             margin-left: 0px;
         }
        
+        .auto-style3 {
+            margin-left: 362px;
+        }
+       
     </style>
 </head>
 <body>
@@ -26,7 +30,7 @@
             
             <asp:Button ID="btnAllLoads" runat="server" Text="All Loads" OnClick="btnAllLoads_Click" CssClass="auto-style2" Width="215px" /><asp:Button ID="btnMyLoads" runat="server" Text="My Loads Status" OnClick="btnMyLoads_Click" Width="215px" /><asp:Button ID="btnMyShipments" runat="server" Text="My Shipments Status" OnClick="btnMyShipments_Click" Width="215px" /><br />
             Shipment DB<br />
-            <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False"  DataSourceID="SqlDataSource2" OnRowDataBound="GridView2_RowDataBound" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" SelectedIndex="1" >
+            <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False"  DataSourceID="SqlDataSource2" OnRowDataBound="GridView2_RowDataBound" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" SelectedIndex="1" CssClass="auto-style3" Height="211px" Width="787px" >
                 <Columns>
                     <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                     <asp:BoundField DataField="PaymentAmount" HeaderText="PaymentAmount" SortExpression="PaymentAmount" />

@@ -96,5 +96,10 @@ namespace GroupReport6
                 Response.Redirect("http://localhost:55690/JobBoard.aspx?Userid=" + userId + "&SearchType=0");
             }
         }
+
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

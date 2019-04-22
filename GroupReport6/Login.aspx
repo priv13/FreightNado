@@ -147,7 +147,7 @@
                     <td class="auto-style28"></td>
                     <td class="auto-style29">
                         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email ..." OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password ..."></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password ..." OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
                     </td>
                     <td class="auto-style6">
                         <asp:Label ID="lblError" runat="server" ForeColor="Red" CssClass="auto-style4"></asp:Label>
